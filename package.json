@@ -1,0 +1,27 @@
+{
+  "name": "bbcollab-bot",
+  "version": "1.1.0",
+  "description": "Un bot pour bbcollab",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "nexe"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatthieuLeboeuf/bbcollab-bot.git"
+  },
+  "author": "MatthieuLeboeuf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MatthieuLeboeuf/bbcollab-bot/issues"
+  },
+  "homepage": "https://github.com/MatthieuLeboeuf/bbcollab-bot#readme",
+  "dependencies": {
+    "moment": "^2.25.3",
+    "selenium-webdriver": "^4.0.0-alpha.7"
+  },
+  "devDependencies": {
+    "nexe": "^3.3.2"
+  }
+}
