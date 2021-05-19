@@ -31,14 +31,22 @@ function startBrowser() {
         let driver = await new Builder().forBrowser('firefox').setFirefoxOptions(options).build();
             await driver.get(config.url);
 
-            await driver.wait(until.elementLocated(By.name('guestnameform')), 60000);
-            var name = await driver.findElement(By.name('guestnameform'));
-            var input = await name.findElement(By.id('guest-name'));
-            input.sendKeys(config.users[i]);
+            await driver.wait(until.elementLocated(By.name('username')), 60000);
+            var input = await driver.findElement(By.name('username'));
+            input.sendKeys(config.users[i][0]);
 
-            await driver.wait(until.elementLocated(By.id('launch-html-guest')), 60000);
+            await driver.wait(until.elementLocated(By.name('password')), 60000);
+            var input = await driver.findElement(By.id('password'));
+            input.sendKeys(config.users[i][1]);
+
+            await driver.wait(until.elementLocated(By.className('submit')), 60000);
             await driver.manage().setTimeouts( { implicit: 1000 } );
-            var btn = await driver.findElement(By.id('launch-html-guest'));
+            var btn = await driver.findElement(By.className('submit'));
+            btn.click();
+
+            await driver.wait(until.elementLocated(By.className('MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary')), 120000);
+            await driver.manage().setTimeouts( { implicit: 1000 } );
+            var btn = await driver.findElement(By.className('MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary'));
             btn.click();
 
             //micro

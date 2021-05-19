@@ -1,9 +1,9 @@
 # Bot bbcollab
-Bot bbcollab pour se connecter au visios conférences sans se réveiller !
+Bot Cned + bbcollab pour se connecter au visios conférences sans se réveiller !
 
 ## Comment ça marche ?
 
-Bbcollab ne disposant pas d'API permettant directement de se connecter, le bot utilise Selenium, une librarie. Pour chaque nom mis dans le fichier de configuration, le bot va ouvrir un nouveau navigateur, se rendre sur l'adresse spécifiée dans la configuration.
+Le Cned et Bbcollab ne disposant pas d'API permettant directement de se connecter, le bot utilise Selenium, une librarie. Pour chaque nom mis dans le fichier de configuration, le bot va ouvrir un nouveau navigateur, se rendre sur l'adresse spécifiée dans la configuration.
 
 ## Installer le bot
 
@@ -22,4 +22,4 @@ Pour que le bot fonctionne correctement, vous devez remplir le fichier de config
 * `url`: l'adresse de connexion bbcollab
 * `time`: l'heure à laquelle le bot doit se connecter
 * `time_bypass`: bypass le temps et lancer le bot immédiatement
-* `users`: tout les noms
+* `users`: tout les identifiants des comptes cned
